@@ -1,0 +1,428 @@
+/* Common styles */
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Styles for smaller screens */
+@media only screen and (max-width: 768px) {
+    /* Adjustments for smaller screens */
+    #top1 {
+        height: auto;
+        flex-wrap: wrap;
+    }
+    #top1 a {
+        margin: 10px;
+        font-size: 12px;
+    }
+    #top2 input {
+        width: calc(100% - 80px);
+        margin-left: 10px;
+    }
+    .top2-left {
+        padding-left: 20px;
+    }
+    .end-top .text-left {
+        padding: 20px;
+    }
+    .text-left h1 {
+        font-size: 60px;
+    }
+}
+
+/* Styles for larger screens */
+@media only screen and (min-width: 769px) {
+    /* Adjustments for larger screens */
+    #top1 a {
+        font-size: 13px;
+    }
+    .top2-left {
+        padding-left: 80px;
+    }
+    .end-top .text-left {
+        padding: 40px 97px;
+    }
+    .text-left h1 {
+        font-size: 100px;
+    }
+}
+
+/* Common styles */
+#padd {
+    margin: 1px 15px;
+}
+
+#top1 {
+    width: 100%;
+    height: 4vh;
+    background-color: #013196;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#top1 a {
+    margin-left: 20px;
+    font-size: 13px;
+    color: white;
+    text-decoration: none;
+}
+
+#top1 a:hover {
+    background-color: #013196;
+    border-bottom: 2px solid wheat;
+}
+
+#top2 {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 10vh;
+    background-color: #0046BE;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 1px solid #4475DA;
+    z-index: 11;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+}
+
+.icons h3 {
+    position: relative;
+    right: 20px;
+    top: 10px;
+    color: #fff;
+    font-family: cursive;
+}
+
+#top2 h2 {
+    font-size: 17px;
+    color: #fff;
+}
+
+#top2 input {
+    width: 390px;
+    height: 28px;
+    padding-left: 10px;
+    margin-left: 30px;
+}
+
+#top2 input::after {
+    border-radius: 2px;
+    border: none;
+}
+
+#top2 #search {
+    position: relative;
+    right: 30px;
+    margin-right: 100px;
+}
+
+#top2 .top2-left {
+    display: flex;
+    align-items: center;
+    padding-left: 80px;
+}
+
+.top2-left h4 {
+    padding-right: 20px;
+    color: #fff;
+}
+
+.top-3 {
+    position: sticky;
+    top: 10vh;
+    width: 100%;
+    height: 4vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    background-color: #0046BE;
+    z-index: 12;
+}
+
+.top-3 #left a {
+    text-decoration: none;
+    font-size: 12px;
+    font-family: monospace;
+    padding-left: 20px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.top-3 #left a:nth-child(7) {
+    color: orange;
+}
+
+.end-top {
+    width: 100%;
+    height: 700px;
+    background-image: url("./Background/Shocked-Indian-Girl-on-Blue-Background-23883-pixahive-1024x683.jpg");
+    background-size:100%;
+    background-repeat:no-repeat;
+    object-fit: cover;
+    object-position: center;
+    overflow: hidden;
+    display: flex;	
+}
+
+.end-top .text-left {
+    flex: 30%;
+    height: inherit;
+    padding: 40px 97px;
+}
+
+.text-left p {
+    display: inline; 
+    color: #fff;
+    background-color: red;
+    font-family: monospace;
+}
+.text-right p{
+    display: inline; 
+    color: #fff;
+    font-family: monospace;
+}
+
+.text-left h2 {
+    color: #fff200;
+    font-size: 40px;
+    padding-top: 10px;
+    font-weight: 200;
+}
+
+.text-left h1 {
+    color: #fff200;
+    font-size: 100px;
+    font-weight: 100;
+}
+
+.text-left {
+    font-size: 19px;
+    color: #fff;
+    font-family: sans-serif;
+}
+
+.condent-pad button {
+    display: block;
+    background-color: transparent;
+    border: 1px solid #fff;
+    padding: 5px;
+    border-radius: 3px;
+    margin-top: 5px;
+    color: #fff;
+}
+
+.condent-pad button:hover {
+    background-color: #001e73;
+    transition: all 0.3s;
+    color: #0046be;
+}
+
+.end-top .text-right {
+    flex: 60%;
+    height: inherit;
+}
+
+.text-right #add1 {
+    width: 700px;
+    height: 200px;
+    margin: 30px 10px 10px;
+    background-color: #f6f6f6;
+    border-radius: 4px;
+    position: relative;
+    position: static;
+}
+
+.text-right #add1 img:nth-child(1) {
+    padding-left: 30px;
+}
+
+.text-right #add1 h1 {
+    position: absolute;
+    display: inline;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 60px 0px 12px 12px;
+}
+/* Adjustments for smaller screens */
+@media only screen and (max-width: 768px) {
+    .scrolling-img {
+        height: 400px; /* Adjust height for smaller screens */
+    }
+    .add-boxess {
+        height: auto; /* Adjust height for smaller screens */
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+    .add-boxess .box {
+        width: 90%;
+        margin: 10px 0;
+    }
+    .add-boxess .box .inner {
+        width: 100%;
+        height: auto;
+    }
+    .box a {
+        position: static;
+        margin-top: 10px;
+        text-align: center;
+    }
+    .typewriter h1 {
+        font-size: 40px; /* Adjust font size for smaller screens */
+    }
+}
+
+/* Adjustments for larger screens */
+@media only screen and (min-width: 769px) {
+    .scrolling-img {
+        height: 800px;
+    }
+    .add-boxess {
+        height: 400px;
+    }
+    .add-boxess .box {
+        width: 300px;
+        margin: 20px;
+    }
+    .add-boxess .box .inner {
+        width: 230px;
+        height: 250px;
+    }
+    .box a {
+        position: absolute;
+        top: 300px;
+        left: 17px;
+        text-decoration: none;
+    }
+    .typewriter h1 {
+        font-size: 80px;
+    }
+}
+
+/* Common styles */
+.scrolling-img {
+    width: 100%;
+    position: relative;
+    background-image: url("./R.webp");
+    object-fit: cover;
+    object-position: center;
+    overflow: hidden;
+}
+
+.scrolling-img marquee {
+    position: absolute;
+    border: none;
+}
+
+.add-boxess {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    position: relative;
+    bottom: 200px; /* Adjust position for larger screens */
+}
+
+.add-boxess .box {
+    width: 300px;
+    height: 350px;
+    background-color: #f6f6f6;
+    margin: 20px;
+    position: relative;
+}
+
+.add-boxess .box .inner {
+    width: 230px;
+    height: 250px;
+    position: absolute;
+    margin-left: 5px;
+}
+
+.add-boxess .box img {
+    width: 100px;
+    height: 100px;
+    padding: 5px 3px 0px 7px;
+    margin-bottom: 5px;
+}
+
+.box a {
+    position: absolute;
+    top: 300px;
+    left: 17px;
+    text-decoration: none;
+}
+
+.typewriter h1 {
+    overflow: hidden;
+    border-right: .15em solid orange;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+    background-image: linear-gradient(to right, rgba(255, 255, 0, 0.452), rgba(255, 0, 0, 0.685), rgba(0, 0, 255, 0.447));
+    font-size: 80px;
+    position: relative;
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+    to {
+        max-width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent
+    }
+    50% {
+        border-color: orange;
+    }
+}
+.header-slider{
+    width: 100%;
+height: 400PX;
+}
+.header-slider{
+    width: 100%;
+height: 400PX;
+position: relative;
+/* border: 2px solid palevioletred; */
+overflow: hidden;
+}
+.header-slider img{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    box-shadow: 3px 3px 12px 7px rgba(215, 179, 230, 0.985);
+}.header-slider a{
+    position: absolute;
+    z-index: 12;
+    left: 50%;
+    top: 25%;
+    padding:80px 10px;
+}
+.header-slider a:nth-child(1){
+    top:25%;
+    left: 80px;
+    
+}
+.header-slider a:nth-child(2){
+   margin-left: 40%;
+    
+}
+.header-slider a:hover{
+    border:1px solid rgba(0, 0, 0, 0.386);
+    background-color: rgba(255, 255, 255, 0.068);
+}

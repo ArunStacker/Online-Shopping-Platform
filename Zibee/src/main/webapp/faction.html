@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="faction.css">
+</head>
+<body>
+<div id="padd">
+    <div id="top2"> 
+    
+        <div class="icons">
+            <img src="./top-img/online-shopping.png" alt="shop" width="100px" height="50px">
+            <h3>ZIBEE</h3>
+        </div>
+       <!-- ----------------- menu icon -->
+       <div id="menu">
+        <img src="./top-img/menu-bar.png" alt="menu" width="30px" height="30px">
+    </div>
+    <h2>All</h2>
+    <input type="text" placeholder="What can i help to find ?">
+    <!-- ----------search icon -->
+    <div id="search">
+    <img src="top-img/loupe (1).png" width="20px" height=20px>
+    </div>
+    <div class="top2-left">
+        <h4>LOCATION</h4>
+        <img src="./carts.png" alt="cart" width="40px" height="40px">
+       <h3 id="add_cart></h3>
+        <h4><a href="Login.html">Login</a></h4>
+    
+    </div>
+</div>
+    <div class="faction_con">
+        <ul>
+            <li><a href="#">ZIBEE faction</a></li>
+            <li><a href="#">Men</a></li>
+            <li><a href="#">Women</a></li>
+            <li><a href="#">Kits</a></li>
+            <li><a href="#">BeadSheet</a></li>
+        </ul>
+    </div>
+    <div class="header-slider">
+        <a href="#" class="control-previous">&#129144</a>
+        <a href="#" class="control-next">&#129146</a>
+        <ul>
+            <img src="./faction/Af_PC_hero._SX3000_QL85_.jpg" alt="" class="header-img" width="100%">
+            <img src="./faction/cml-pc._CB580671423_.jpg" alt="" class="header-img" width="100%">
+            <img src="./faction/genz-PC._CB580671423_.jpg" alt="" class="header-img" width="100%">
+            <img src="./faction/Top-Ingress-pc._SX3000_QL85_.jpg" alt="" class="header-img" width="100%">
+
+            <!-- <img src="./header6.jpg" alt="" class="header-img"> -->
+        </ul>
+    </div>
+ <div class="dis_fac">
+    <h3>New year discount sall</h3>
+    <h3>60% off</h3>
+    <h3>Sall close soon..</h3>
+ </div>
+<div class="faction-head">
+    <div class="head a1"></div>
+    <div class="head a2">
+        <div id="topimg">
+        <img src="./faction/a57d38af-874d-4889-85ac-8aeae5bad237.jpg" alt="" width="900" height="300">
+    </div>
+    <div class="prodect_container">
+        <div class="pro onep" id="offer">
+          <img src="./faction-img/1.avif" alt="faction-img" onmouseover="onimage.call(this)" onmouseout="outimage.call(this)">
+            <p>80%<br>off</b></p>
+         <h3>Navy Blue Cowl Neck Sequin Bodycon Dress <b>$100</b></h3>
+        
+         <button id="buy_box">Add</button>
+        </div>
+        <div class="pro twop">
+            <img src="./faction-img/1.avif" alt="faction-img" onmouseover="onimage.call(this)" onmouseout="outimage.call(this)">
+            <p>80%<br>off</b></p>
+         <h3>Navy Blue Cowl Neck Sequin Bodycon Dress <b>$100</b></h3>
+        
+         <button id="buy_box">Add</button>
+        </div>
+        <div class="pro threep">
+            <img src="./faction-img/1.avif" alt="faction-img" onmouseover="onimage.call(this)" onmouseout="outimage.call(this)">
+            <p>80%<br>off</b></p>
+         <h3>Navy Blue Cowl Neck Sequin Bodycon Dress <b>$100</b></h3>
+        
+         <button id="buy_box">Add</button>
+        </div>
+    </div>
+    </div>
+ </div>
+ </div>
+<script>
+	function onimage()
+{
+    this.setAttribute("src","./top-img/a1.jpg");
+}
+function outimage()
+{
+    this.setAttribute("src","./top-img/a2.jpg");
+}
+
+	const images=document.querySelectorAll(".header-slider ul img");
+const previous=document.querySelector(".control-previous");
+const next=document.querySelector(".control-next");
+let n=0;
+function changeslide(){
+    for(let i=0;i<images.length;i++){
+        images[i].style.display="none";
+    }
+    images[n].style.display="block";
+}
+changeslide()
+
+previous.addEventListener("click",(e)=>{
+    if(n>0){
+        n--;
+    }else{
+        n=images.length-1;
+    }
+    changeslide();
+})
+
+next.addEventListener("click",(e)=>{
+    if(n<images.length-1){
+        n++;
+    }else{
+        n=0;
+    }
+    changeslide();
+});
+let fac_hover=document.getElementById("offer");
+// fac_hover.addEventListener("mouseover",e=>
+// {
+// e.target.style.background url('./faction-img/2.avif')
+// });
+
+// addcoart
+let count=0;
+const tops=document.getElementById("add_cart");
+const corts=document.getElementById("buy_box");
+
+corts.addEventListener("click",()=>{
+    if(count<=5)
+    {
+    count++;
+    tops.value.textcondent=count;
+    sendCountToServer(count)
+    }
+    else
+    alert("out of stack")
+    
+})
+
+function sendCountToServer(countValue) {
+    fetch('faction', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: 'count=' + countValue,
+    })
+    .then(response => response.text()) // assuming you're sending back some response
+    .then(data => {
+        console.log(data); // Process server response if needed
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+    });
+}
+
+
+
+
+
+
+
+</script>
+
+
+<%
+
+%>
+</body>
+</html>
